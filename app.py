@@ -11,6 +11,11 @@ def home():
 def about():
     return render_template('about.html')
 
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 @app.route('/blog')
 def blog():
     # Define some example blog posts

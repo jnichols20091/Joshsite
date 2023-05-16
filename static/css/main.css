@@ -3,7 +3,16 @@ li {
 }
 #searchbar{
     flex-flow: row-reverse;
+    float: right;
+    margin-right: 0px;
+    position: relative;
 }
 #navitems{
     flex-direction: column;
+}
+#navbar{
+    width: 100% !important;
+}
+#link{
+    background: ;
 }
