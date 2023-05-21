@@ -1,6 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Blueprint
 
 app = Flask(__name__)
+post_pages = Blueprint("post_pages", __name__)
+
+@post_pages.get("/post/<int:post_id>")
+def display_post(title: str):
+    return "Display post page."
+
+@post_pages.route("/post/", methods=["GET", "POST"])
+def create_post():
+    if request.method == "post":
+        title = request.form.get("title")
+        content = request.form.get("content")
+        return redirect(url_for("post_pages.display_post", title=title))
+    return "Create post page."
 
 # Define the routes
 @app.route('/')
@@ -18,22 +31,7 @@ def login():
 
 @app.route('/blog')
 def blog():
-    # Define some example blog posts
-    posts = [
-        {
-            'title': 'First Blog Post',
-            'content': 'This is my first blog post!',
-            'author': 'John Doe',
-            'date_posted': 'May 1, 2023'
-        },
-        {
-            'title': 'Second Blog Post',
-            'content': 'This is my second blog post!',
-            'author': 'Jane Smith',
-            'date_posted': 'May 7, 2023'
-        }
-    ]
-    return render_template('blog.html', posts=posts)
+    return render_template('blog.html')
 @app.route('/search', methods=['GET', 'POST'])
 # @login_required
 def search():

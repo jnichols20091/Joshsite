@@ -2,11 +2,8 @@
 
 {% block content %}
     <h1>Blog</h1>
-    {% for post in posts %}
-        <div class="post">
-            <h2>{{ post.title }}</h2>
-            <p class="text-muted">{{ post.date_posted }} by {{ post.author }}</p>
-            <p>{{ post.content }}</p>
-        </div>
-    {% endfor %}
+    <div class="input-group mb-2">
+    <div class="input-group-prepend">
+        <div class="input-group-text">Post</div>
+    </div>
 {% endblock %}

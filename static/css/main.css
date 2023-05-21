@@ -17,7 +17,26 @@ li {
 #link{
     background: inherit;
 }
+#basebody{
+    font-family: monospace;
+    padding: inherit;
+}
+#navbrandnav{
+    font-family: -webkit-body;
+    font-size: xxx-large;
+}
 ---------------login
 #loginbackground{
-    background: 19, 35, 47, 0.9;
+    color: aquamarine;
 }
+#loginbody{
+    background: #025464;
+}
+#signup{
+    font-size: larger;
+    font-family: sans-serif;
+}
+#login{
+    text-align: end;
+}
+
