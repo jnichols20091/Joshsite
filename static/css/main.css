@@ -1,7 +1,5 @@
 
-li {
-    list-style-type: none;
-}
+
 #searchbar{
     flex-flow: row-reverse;
     float: right;
@@ -32,11 +30,22 @@ li {
 #loginbody{
     background: #025464;
 }
-#signup{
-    font-size: larger;
-    font-family: sans-serif;
-}
-#login{
-    text-align: end;
-}
 
+#login{
+    margin-left: 2%;
+    position: unset;
+}
+#signupform{
+    margin-left: 2%;
+    position: unset;
+}
+#loginbutton{
+    box-shadow: 2px 2px 2px 2px #232121;
+}
+#Getstartedbutton{
+    box-shadow: 2px 2px 2px 2px #232121;
+}
+#logindiv{
+    padding-top: 20px;
+    font-family: ubuntu;
+}

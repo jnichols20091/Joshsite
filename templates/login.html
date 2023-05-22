@@ -3,7 +3,9 @@
 <body id="loginbody">
 <div class="form" id="loginbackground">
 {% include "base.html" %}
-      <div class="tab-content">
+      <div class="tab-content" id="logindiv">
+          <div class="col-xxl-12">
+              <div class="row" id="signupform">
         <div id="signup">
           <h1>Sign Up for Free</h1>
           <form action="/" method="post">
@@ -33,7 +35,7 @@
             </label>
             <input type="password"required autocomplete="off"/>
           </div>
-          <button type="submit" class="button button-block"/>Get Started</button>
+          <button type="submit" class="button button-block" id="Getstartedbutton"/>Get Started</button>
           </form>
         </div>
         <div id="login">
@@ -51,11 +53,12 @@
             </label>
             <input type="password"required autocomplete="off"/>
           </div>
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          <button class="button button-block"/>Log In</button>
+              <h5>
+                  <p class="forgot"><a href="#"><i>Forgot Password?</i></a></p></h5>
+          <button class="button button-block" id="loginbutton"/>Log In</button>
           </form>
-        </div>
-      </div><!-- tab-content -->
+       </div></div>
+      </div></div><!-- tab-content -->
 </div> <!-- /form -->
 </body>
 {% endblock %}
