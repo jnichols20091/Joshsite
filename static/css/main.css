@@ -41,9 +41,11 @@
 }
 #loginbutton{
     box-shadow: 2px 2px 2px 2px #232121;
+    background: gainsboro;
 }
 #Getstartedbutton{
     box-shadow: 2px 2px 2px 2px #232121;
+    background: gainsboro;
 }
 #logindiv{
     padding-top: 20px;
