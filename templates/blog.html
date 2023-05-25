@@ -1,9 +1,17 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% include "base.html" %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>{% block title %}{% endblock %} - My Blog</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+<body>
+    {% block content %}{% endblock %}
     <h1>Blog</h1>
     <div class="input-group mb-2">
-    <div class="input-group-prepend">
+    <div class="input-group-prepend" id="postbutton">
         <div class="input-group-text">Post</div>
     </div>
-{% endblock %}
+    </div></body>
